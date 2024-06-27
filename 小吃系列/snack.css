@@ -1,0 +1,154 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background: url('3.jpg') no-repeat center center fixed;
+    background-size: cover; /* 自动调整图片大小以覆盖整个页面 */
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+    color: rgb(15, 1, 1);
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+
+.back-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    z-index: 1000; /* 确保按钮和文字在页面上方 */
+}
+
+.back-button {
+    width: 100px;
+    height: 100px;
+    background: url('4.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vh;
+}
+
+/* 设置基本样式 */
+.sentence {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 1.5em;
+    opacity: 0;
+}
+/* 定义从左边进入的动画 */
+@keyframes slideInLeft {
+    0% { transform: translateX(-100vw); opacity: 1; } /* 从视窗左侧外开始 */
+    60% { transform: translateX(10%); opacity: 1; }
+    100% { transform: translateX(0vw); opacity: 1; }
+}
+
+/* 定义从右边进入的动画 */
+@keyframes slideInRight {
+    0% { transform: translateX(100vw); opacity: 1; } /* 从视窗右侧外开始 */
+    60% { transform: translateX(-10%); opacity: 1; }
+    100% { transform: translateX(0vw); opacity: 1; }
+}
+
+/* 定义从左边退出的动画 */
+@keyframes slideOutLeft {
+    0% { transform: translateX(0vw); opacity: 1; }
+    40% { transform: translateX(10%); opacity: 1; }
+    100% { transform: translateX(-100vw); opacity: 0; } /* 移动到视窗左侧外 */
+}
+
+/* 定义从右边退出的动画 */
+@keyframes slideOutRight {
+    0% { transform: translateX(0vw); opacity: 1; }
+    40% { transform: translateX(-10%); opacity: 1; }
+    100% { transform: translateX(100vw); opacity: 0; } /* 移动到视窗右侧外 */
+}
+
+
+
+
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    height: 12%;
+    width: 100%;
+    bottom: 1em;
+    line-height: 1em; /* 调整行间距 */
+}
+
+.section {
+    position: relative;
+}
+
+#section2 {
+    margin-top: -50px; /* 调整这个值来向上移动section2 */
+    padding-top: 20px; /* 增加内边距以调整内容的位置 */
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "title title title title"
+        "image text text text";
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* 确保容器中的内容可以相对定位 */
+    top: -200px; /* 调整这个值来向上移动整个内容 */
+}
+
+.grid-item.title {
+    grid-area: title;
+    text-align: center;
+}
+
+.grid-item.image {
+    grid-area: image;
+    align-self: center;
+    width: 100%;
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
+    height: auto; /* 保持图片的纵横比 */
+}
+
+.grid-item.text {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    padding-left: 200px;
+    font-weight: bold;    /* 粗体 */
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
+}
+
+.text-content p {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+}
+

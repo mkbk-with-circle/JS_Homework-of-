@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/Users/yuanmingyulinyizaitaofan/Desktop/壁纸+头像/WechatIMG8879.jpeg'); /* 背景图片 */
+    background-size: cover; /* 图片覆盖整个背景 */
+    background-position: center; /* 图片居中 */
+    background-repeat: repeat-y; /* 背景图片从上往下重复 */
+}
+
+header {
+    background-color: #1fe2a1;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.food-item {
+    margin: 10px 0;
+    padding: 20px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.food-item:hover {
+    background-color: var(--hover-color, #ddd);
+}
+
+.food-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+footer {
+    background-color: rgba(76, 175, 80, 0.8); /* 半透明背景色 */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    /*position: fixed;*/
+    width: 100%;
+    bottom: 0;
+    z-index: 1000; /* 设置一个较大的值 */
+}
+
+.text-box {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    margin-bottom: 100px; /* 假设footer高度为60px */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+.button:hover {
+    background-color: #45a049;
+}
+.comment-box {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    overflow-y: auto; /* 使用 auto 让内容超出时才显示滚动条 */
+    max-height: 200px; /* 最大高度限制 */
+    z-index: 10000; /* 确保 footer 处于最上层 */
+}
+
+
+
+
+/* 保存按钮样式 */
+.button-save {
+    color: white;
+    cursor: pointer;
+    width: 65px; /* 按钮宽度 */
+    height: 50px; /* 按钮高度 */
+    padding-right: 20px;
+    border-right: 50px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 删除按钮样式 */
+.button-delete {
+    color: white;
+    cursor: pointer;
+    width: 65px; /* 按钮宽度 */
+    height: 50px; /* 按钮高度 */
+    background-color: #f44336;
+    color: white;
+}
