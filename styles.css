@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/Users/yuanmingyulinyizaitaofan/Desktop/壁纸+头像/WechatIMG8879.jpeg'); /* 背景图片 */
+    background-image: url('照片/8.jpeg'); /* 背景图片 */
     background-size: cover; /* 图片覆盖整个背景 */
     background-position: center; /* 图片居中 */
     background-repeat: repeat-y; /* 背景图片从上往下重复 */
